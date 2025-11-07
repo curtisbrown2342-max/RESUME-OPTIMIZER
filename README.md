@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ResumeAI - AI-Powered Resume Optimizer
 
-## Getting Started
+A modern SaaS application that helps job seekers optimize their resumes using AI-powered analysis.
 
-First, run the development server:
+## 🚀 Features
+
+- **Instant AI Analysis**: Get comprehensive feedback on your resume in seconds
+- **ATS Score**: Check your resume's compatibility with Applicant Tracking Systems
+- **Actionable Insights**: Receive specific recommendations to improve your resume
+- **Beautiful UI**: Modern, professional design built with Next.js and shadcn/ui
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+
+## 💰 Monetization Ready
+
+### Pricing Tiers
+- **Free**: 1 resume analysis with basic feedback
+- **Pro**: $9/month - Unlimited analyses with detailed feedback and ATS score tips
+- **Enterprise**: Custom pricing for teams and organizations
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14+ (App Router)
+- **Language**: TypeScript
+- **UI Components**: shadcn/ui
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **API**: Next.js API Routes
+
+## 📁 Project Structure
+
+```
+app/
+  ├── layout.tsx           # Root layout with metadata
+  ├── page.tsx             # Main page (landing + analyzer)
+  ├── globals.css          # Global styles
+  └── api/
+      └── analyze-resume/
+          └── route.ts     # Resume analysis API endpoint
+
+components/
+  └── ui/                  # shadcn/ui components
+
+public/
+  ├── images/
+  │   └── logo.png         # ResumeAI logo
+  └── og-image.png         # Social media preview image
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ or Bun
+- npm or bun package manager
+
+### Installation
 
 ```bash
+# Install dependencies
+npm install
+# or
+bun install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 # or
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 API Endpoints
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### POST /api/analyze-resume
 
-## Learn More
+Analyzes a resume and provides AI-powered feedback.
 
-To learn more about Next.js, take a look at the following resources:
+**Request:**
+```json
+{
+  "resume": "Your resume text here..."
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Response:**
+```json
+{
+  "atsScore": 85,
+  "strengths": [
+    "Contact information is clearly visible",
+    "Work experience section is included",
+    "Good use of action verbs throughout"
+  ],
+  "improvements": [
+    "Add quantifiable metrics to achievements",
+    "Expand your resume with more detailed descriptions"
+  ]
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Design
 
-## Deploy on Vercel
+- **Style**: Apple Minimalist - Clean, professional, minimal design
+- **Color Scheme**: Blue gradient (primary), slate grays (neutral)
+- **Typography**: Inter font family
+- **Components**: Built with shadcn/ui for consistency and accessibility
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📊 SEO & Metadata
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Comprehensive metadata for search engines
+- Open Graph tags for social media sharing
+- Twitter Card support
+- Semantic HTML structure
+- Proper heading hierarchy
+
+## 🔐 Security
+
+- Environment variables for sensitive data
+- No API keys exposed in client-side code
+- Input validation on API endpoints
+- CORS protection
+
+## 📈 Future Enhancements
+
+- Integration with Gemini API for advanced AI analysis
+- User authentication and account management
+- Resume templates and examples
+- Comparison with job descriptions
+- Export to PDF functionality
+- Email notifications
+- Analytics dashboard
+
+## 💳 Monetization Strategy
+
+1. **Free Tier**: Limited analyses to drive conversions
+2. **Pro Tier**: Unlimited access at $9/month
+3. **Enterprise**: Custom pricing for HR departments and recruitment agencies
+4. **API Access**: Charge for programmatic access
+5. **White Label**: License to other platforms
+
+## 📞 Support
+
+For questions or issues, please contact support@resumeai.app
+
+## 📄 License
+
+MIT License - feel free to use this project as a starting point for your own SaaS.
+
+---
+
+**Built with ❤️ using Next.js, TypeScript, and shadcn/ui**
